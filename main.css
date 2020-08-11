@@ -1,0 +1,86 @@
+/* Load Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,300;1,400&family=Permanent+Marker&display=swap');
+
+/* Global Variables */
+:root {
+  --color-bg-primary: #ffffff;
+  --color-bg-secondard: #ffffff;
+  --color-fg-primary: #ffffff;
+  --color-fg-secondary: #ffffff;
+
+  --color-bg-jumbotron: blueviolet;
+  --color-fg-jumbotron: #ffffff;
+
+  --color-text-shadow: #110000;
+}
+
+
+
+*, html, body {
+  box-sizing: content-box;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  color: var(--color-fg-jumbotron);
+}
+
+header.jumbotron {
+  align-items: center;
+  background-color: var(--color-bg-jumbotron);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+}
+
+.header_title {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  text-shadow: 1px 1px 2px var(--color-text-shadow);
+}
+
+.header_subtitle {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.5rem;
+  font-style: italic;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+/* Small Screens */
+@media (min-width: 576px ) {
+  .header_title {
+    font-size: 4rem;
+  }
+}
+
+/* Medium Screens */
+@media (min-width: 768px ) {
+  
+}
+
+/* Large Screens */
+@media (min-width: 992px ) {
+  
+}
+
+/* Extra Large Screens */
+@media (min-width: 1200px ) {
+  
+}
+
+/* Extra, Extra Large Screens */
+@media (min-width: 1400px ) {
+  
+}
