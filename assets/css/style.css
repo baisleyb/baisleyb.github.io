@@ -1,0 +1,239 @@
+/*--------------------------------------------------------------
+Global Variables
+--------------------------------------------------------------*/
+:root {
+	--masthead-width: 40%;
+	--main-text-color: rgb(33, 37, 41);
+	--link-color: rgb(90, 90, 235);
+
+
+	--section-bg-color-1: rgb(90, 90, 235);
+	--section-bg-color-2: rgb(190, 90, 235);
+	--section-bg-color-3: rgb(255, 90, 235);
+  }
+
+
+
+/*--------------------------------------------------------------
+Global Styles
+--------------------------------------------------------------*/
+html {
+	box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+body {
+	color: var(--main-text-color);
+	font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+	line-height: 1.5;
+	margin: 0;
+}
+
+a,
+a:visited {
+	color: var(--link-color);
+	text-decoration: none;
+	transition: opacity 400ms ease-in-out;
+}
+a:hover {
+	opacity: .6;
+}
+
+img {
+	max-width: 100%;
+}
+
+
+
+
+
+/*--------------------------------------------------------------
+Buttons
+--------------------------------------------------------------*/
+.btn {
+	border: 1px solid transparent;
+	border-radius: .25rem;
+	cursor: pointer;
+	display: inline-block;
+	padding: .375rem .75rem;
+	text-align: center;
+	transition: opacity 400ms ease-in-out;
+	vertical-align: middle;
+}
+
+.button:hover {
+	opacity: .08;
+}
+
+.btn-primary {
+	color: #fff;
+	background-color: #0d6efd;
+	border-color: #0d6efd;
+}
+
+
+
+/*--------------------------------------------------------------
+Main Content Styles
+--------------------------------------------------------------*/
+.main-content > * {
+	padding: 1.5em;
+}
+
+
+/*--------------------------------------------------------------
+Section Content Styles
+--------------------------------------------------------------*/
+.section-wrapper:nth-child(1) {
+	/* background-color: var(--section-bg-color-1); */
+
+	background: rgb(52,141,199);
+	background: linear-gradient(90deg, rgba(52,141,199,1) 0%, rgba(57,158,224,1) 35%, rgba(92,176,231,1) 100%);
+}
+
+.section-wrapper:nth-child(2) {
+	/* background-color: var(--section-bg-color-2); */
+
+	background: rgb(159,60,191);
+	background: linear-gradient(90deg, rgba(159,60,191,1) 0%, rgba(176,67,212,1) 35%, rgba(204,105,236,1) 100%);
+}
+
+.section-wrapper:nth-child(3) {
+	/* background-color: var(--section-bg-color-3); */
+
+	background: rgb(255,112,0);
+	background: linear-gradient(90deg, rgba(255,112,0,1) 0%, rgba(226,99,0,1) 35%, rgba(255,155,76,1) 100%);
+}
+
+/*--------------------------------------------------------------
+Masthead Styles
+--------------------------------------------------------------*/
+.masthead {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 1.5em;
+}
+
+.masthead-title {
+	line-height: 1.2;
+	text-transform: uppercase;
+}
+
+.social ul { 
+	list-style: none;
+	padding: 0;
+}
+.social li {
+	display: inline-block;
+	font-size: 1.5em;
+	margin-right: 1em;
+}
+
+.social a {
+	color: var(--main-text-color);
+	font-size: 1.5em;
+	line-height: 1.5;
+	opacity: .8;
+}
+
+.social a:hover {
+	opacity: 1;
+}
+
+
+
+
+/*--------------------------------------------------------------
+Sections Styles
+--------------------------------------------------------------*/
+
+
+
+
+
+/*--------------------------------------------------------------
+About Me Section
+--------------------------------------------------------------*/
+
+
+
+
+
+/*--------------------------------------------------------------
+Footer Section
+--------------------------------------------------------------*/
+.footer {
+	background-color: #242424;
+	color: #5f5f5f;
+	padding: 1.5em;
+}
+
+
+
+
+
+
+
+/*--------------------------------------------------------------
+Basic responsive layout for all browsers:
+--------------------------------------------------------------*/
+
+.site {
+	max-width: 50em;
+	margin: 0 auto;
+}
+
+@media screen and (min-width: 60em) {
+
+	.site  {
+		/* display: grid; */
+		/* grid-template-columns: repeat(2, 1fr); */
+		max-width: none;
+	}
+
+	.masthead {
+		height: 90vh;
+		position: fixed;
+		width: var(--masthead-width);
+	}
+
+	.main-content {
+		margin-left: var(--masthead-width);
+	}
+		
+}
+
+
+/*--------------------------------------------------------------
+CSS Grid layout for modern browsers:
+--------------------------------------------------------------*/
+
+@supports (grid-area: auto) {
+
+	@media screen and (min-width: 60em) {
+
+		/*--------------------------------------------------------------
+		Sections Styles
+		--------------------------------------------------------------*/
+		.section-content {
+			display: grid;
+			grid-template-columns: 1fr 2fr;
+		}
+		
+		.section-heading {
+			grid-column: span 2;
+		}
+		
+		.section-text {
+			padding-left: 1em;
+		}
+	}
+	
+
+
+}
