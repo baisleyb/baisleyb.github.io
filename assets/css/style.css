@@ -116,7 +116,7 @@ Masthead Styles
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	padding: 1.5em;
+	padding: 1.5em 0;
 }
 
 .masthead-title {
@@ -183,14 +183,16 @@ Footer Section
 Basic responsive layout for all browsers:
 --------------------------------------------------------------*/
 
-.site {
+.masthead,
+.section-content {
 	max-width: 50em;
 	margin: 0 auto;
 }
 
 @media screen and (min-width: 60em) {
 
-	.site  {
+	.masthead,
+	.section-content  {
 		/* display: grid; */
 		/* grid-template-columns: repeat(2, 1fr); */
 		max-width: none;
@@ -198,6 +200,7 @@ Basic responsive layout for all browsers:
 
 	.masthead {
 		height: 90vh;
+		padding: 1.5em;
 		position: fixed;
 		width: var(--masthead-width);
 	}
